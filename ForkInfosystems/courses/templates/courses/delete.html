@@ -1,0 +1,11 @@
+{% extends 'courses/base.html' %}
+{% block content %}
+	<h1>Deleting..</h1>
+	<p>Are you sure you want to delete {{ item }}</p>
+	<a href="{% url 'courses-home' %}"><button>Cancle</button></a>
+	<form method="POST" action="">
+		{% csrf_token %}
+		<br/>
+		<input type="submit" name="delete-course" value="Delete">
+	</form>
+{% endblock content %}

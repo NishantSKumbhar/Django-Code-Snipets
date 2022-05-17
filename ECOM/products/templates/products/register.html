@@ -1,0 +1,14 @@
+{% extends 'products/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% if form.errors %}
+	<p>There is a Problem with form</p>
+{% endif %}
+	<h1>Register</h1>
+	<form method="POST" action="">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<hr>
+		<input type="submit" value="Create User">
+	</form>
+{% endblock content %}

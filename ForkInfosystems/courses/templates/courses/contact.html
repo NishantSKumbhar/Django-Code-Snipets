@@ -1,0 +1,28 @@
+{% extends 'courses/base.html' %}
+{% block content %}
+	<div class="row">
+		<div class="col-md-5">
+			<br/><br/><br/>
+			<h1>Say Hello...</h1>
+			<br/><br/><br/>	
+			<img src="https://www.360websitedesigning.com/images/header_vector_v3-1.png" height="400" width="500">
+		</div>
+		<div class="col-md-7">
+			<div class="content-section">
+				<form method="POST" action="">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						<legend class="border-bottom mb-4">
+							Join Today
+						</legend>
+						{{ form }}
+					</fieldset>
+					<hr>
+					<input type="submit" name="course-submit" value="Submit">
+				</form>
+			</div>
+			
+			
+		</div>
+	</div>
+{% endblock content %}

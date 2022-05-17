@@ -1,0 +1,22 @@
+
+	<h1>TO DO</h1>
+	
+	<form method="POST" action="/">
+		<!-- {{ form }} as it will give us all fields but we dont want all so -->
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" name="Create Task">
+	</form>
+	 
+	<div>
+		<h1>Task : </h1>
+		
+		{% for i in tasks %}
+			<div>
+				<a href="{% url 'task-update' i.id %}">Update</a>
+				<p>{{ i.name }}</p>
+			</div>
+		{% endfor %}
+		
+	</div>
+	

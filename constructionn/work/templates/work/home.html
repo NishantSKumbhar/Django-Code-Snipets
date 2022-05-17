@@ -1,0 +1,33 @@
+{% extends 'work/base.html' %}
+{% block content %}
+	<div>
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="https://www.spacex.com/static/images/backgrounds/launches/launches_header_desktop.webp" class="d-block w-100" alt="...">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="https://www.spacex.com/static/images/backgrounds-2022/sl4-10/post-launch/Homepage_Starlink_4-10_Desktop.webp" class="d-block w-100" alt="...">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="https://www.spacex.com/static/images/backgrounds-2021/hls-resized-2.webp" class="d-block w-100" alt="...">
+			    </div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+		</div>
+	</div>
+
+	{% for i in posts %}
+	<h1> {{ i.title }} </h1>
+	<p>by {{ i.author }} on {{ i.date_posted }}</p>
+	<p>Content : {{ i.content }}</p>
+	{% endfor %}
+
+{% endblock content %}

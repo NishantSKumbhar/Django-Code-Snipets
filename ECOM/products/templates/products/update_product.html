@@ -1,0 +1,10 @@
+{% extends 'products/base.html' %}
+{% block content %}
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form}}
+        <hr>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock content %}
